@@ -14,15 +14,6 @@ public class ParallelMax {
         return pool.invoke(new MaxFinderTask(a, 0, a.length));
     }
     
-    private static int sequentialMax(int[] a, int low, int high) {
-        int max = a[low];
-        for (int i = low + 1 ; i < high ; i++) {
-            if (a[i] > max) {
-                max = a[i];
-            }
-        }
-        return max;
-    }
     
     private static class MaxFinderTask extends RecursiveTask<Integer> {
 
@@ -53,7 +44,16 @@ public class ParallelMax {
             }
         }
         
+        private static int sequentialMax(int[] a, int low, int high) {
+            int max = a[low];
+            for (int i = low + 1 ; i < high ; i++) {
+                if (a[i] > max) {
+                    max = a[i];
+                }
+            }
+            return max;
+        }
+        
     }
-    
     
 }
