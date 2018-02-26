@@ -1,5 +1,5 @@
 # Multithreading Workshop
-###Multithreading exercises:
+## Multithreading exercises:
 * Dining Philosophers problem - multithreading solution
 * Student Library - Reentrant locks
 * Parallel mergesort implementation
